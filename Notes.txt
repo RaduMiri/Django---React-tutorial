@@ -1,0 +1,21 @@
+0) pip install django djangorestframework
+1) Make the project run
+    django-admin startproject (project_name)
+2) Make the first app for the api run
+    cd music_controller
+    django-admin startapp api
+3) Add in settings.py to installed apps the api
+    'api.apps.ApiConfig'
+    'rest_framework'
+    The ApiConfig function is made in apps in the initialized app when you startapp
+    rest_framework we'll need in a minute
+4) Making the views, btw, they all need the request parameter and return eitehr a HttpResoponse, or a render
+5) Setup urls in the app folder, urls.py which needs to be made, then register the urls in the project urls.py
+5.1) To not get the migrations error just run
+    python .\manage.py makemigrations
+    python .\manage.py migrate
+    even though there are no models to migrate yet
+6) Now make the models in the models.py. They are clases that inherit models.Model
+    Django likes Fat models and thin views, so put most of the logic in the models
+    !Ids are automatically made
+7) Make serializers, which make models intro strings for json
