@@ -19,3 +19,34 @@
     Django likes Fat models and thin views, so put most of the logic in the models
     !Ids are automatically made
 7) Make serializers, which make models intro strings for json
+
+8) Test if npm works in music_controller, and if it doesn't make it work
+9) django-admin startapp frontend in music_controller and then make a bunch of folders, mainly, static, src, and templates
+10) In cd frontend run npm init -y to initialize some things
+    #Note, npm is going to store many modules, like react, babble, etc, do a lot of stuff
+11) npm i webpack webpack-cli --save-dev 
+    #to bundle everything in 1 js file
+12) npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev 
+    #we run babbel to make the app backwards compatible with other browsers
+13) npm i react react-dom --save-dev 
+    #install react
+14) npm install @material-ui/core
+    #some assets, sth like bootsrap
+14.1) npm config set registry http://registry.npmjs.org
+      #for npm not found
+15) npm install @babel/plugin-proposal-class-properties
+    # for asynch and await
+16) npm install react-router-dom
+    #to reroute pages
+17) npm install @material-ui/icons
+    #for icons
+18) Configure these additions, copied. Just sets up babel and the environment
+19) Webpack.config.js make it to bundle files, copied
+20) Add scripts to package.json
+"scripts": {
+    "dev": "webpack --mode development --watch", 
+    "build": "webpack --mode production"
+  },
+21) Setup urls and views for index and react
+22) Setup React in src/components/App.js
+23) Render the component App.js in index.html
